@@ -1,0 +1,11 @@
+.nav{
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: large;
+    color: black;
+}
+
+.icons{
+    cursor: pointer;
+}

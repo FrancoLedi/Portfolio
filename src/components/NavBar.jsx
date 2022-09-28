@@ -14,16 +14,16 @@ export const NavBar = () => {
 
     return(
         <>
-        <Navbar bg="light" variant="light">
+        <Navbar>
         <Container>
           <Navbar.Brand className="d-flex flex-row" >
           <Nav.Link href='https://github.com/FrancoLedi/FrancoLedi' ><Icon className="mx-2 icons" icon="logos:github-icon" inline={true} /></Nav.Link>
           <Nav.Link href='https://www.linkedin.com/in/francoledesma/' ><Icon className="icons" icon="cib:linkedin" color="black" inline={true} /></Nav.Link>
           </Navbar.Brand>
-          <Nav className="justify-content-end nav">
-            <Nav.Link >Home</Nav.Link>
-            <Nav.Link className="mx-4">Tech Skills</Nav.Link>
-            <Nav.Link >Projects</Nav.Link>
+          <Nav className="nav">
+            <Nav.Link className="mx-2">Home</Nav.Link>
+            <Nav.Link className="mx-2">Tech Skills</Nav.Link>
+            <Nav.Link className="mx-2">Projects</Nav.Link>
           </Nav>
         </Container>
       </Navbar>

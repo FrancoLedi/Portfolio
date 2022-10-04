@@ -1,19 +1,26 @@
 .card{
     background-color: #141414d9;
     border-radius: 40px;
+    box-sizing: border-box;
+    width: 80%;
+    margin: auto;
 }
 
-.picture{
-    padding: 0px;
-}
 
 .imagen{
     width: 100%;
-    height: 100%;
+    height: 90%;
     border-radius: 40px;
+    box-sizing: border-box;
+}
+
+.picture{
+    padding: 0;
 }
 
 .buttons{
     margin: .3rem;
 }
+
+
 

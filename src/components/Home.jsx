@@ -7,7 +7,7 @@ import './Home.css'
 export const Home = () => {
   return (
     <>
-    <Container>
+    <Container className='home'>
         <Row >
             <Col className="justify-content-md-center d-flex align-items-center" xs={6} >
                 <Row className='align-items-center justify-content-evenly'>

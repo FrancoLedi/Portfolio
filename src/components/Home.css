@@ -23,6 +23,10 @@
     min-width: 40%;
 }
 
+.button:hover{
+    box-shadow: inset 0px 12px 15px #231546d3;
+}
+
 .button2{
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
@@ -38,17 +42,25 @@
     outline:  3px solid #000000;
     outline-offset: -4px;
     border-style: none;
-    background-color: #000000b7;
+    background-color: #ffffffd3;
 }
 
+.button2:hover{
+    background-color: #000000b7;
+    color: #ffffffd3;
+}
 
 .paragraph{
     color: rgba(0, 0, 0, 0.6);
     font-weight: 600;
 }
 
-.home{
-    margin: 5rem 0;
-    height: 60vh;
-    justify-self: center;
+
+
+.divImg{
+    max-width: 450px;
+}
+
+.img{
+    width: 100%;
 }

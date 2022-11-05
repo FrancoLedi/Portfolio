@@ -4,9 +4,13 @@
     font-weight: 700;
     font-size: large;
     color: black;
-    margin-right: 4em;
+    
 }
 
 .icons{
     cursor: pointer;
+}
+
+.language{
+    background-color: black;
 }

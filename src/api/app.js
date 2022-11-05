@@ -20,7 +20,7 @@ server.use((req, res, next) => {
   next();
 });
 
-server.get("/", routes);
+server.use("/", routes);
 
 // Error catching endware.
 server.use((err, req, res, next) => { // eslint-disable-line no-unused-vars

@@ -30,18 +30,26 @@ Email.verify(function (error, success) {
   });
 
 // Configurar las rutas
-router.get('/', async (req, res) => {
+
+
+  router.post('/message', async (req, res) => { 
 
     await Email.sendMail({
-        from: 'franco', // sender address
+        from: req.body.firstName + " " + req.body.lastName, // sender address
         to: EMAIL_USER, // list of receivers
         subject: "Propuesta laboral ✔", // Subject line
         html: `
-        <p>Email: ${'Francoblabla@gmail.com'}</p>
-        <p>Phone: ${'1169785263'}</p>
-        <p>Message: ${'Soy el mensaje'}</p>`, // html body
+        <p>Email: ${req.body.mail}</p>
+        <p>Phone: ${req.body.phone}</p>
+        <p>Message: ${req.body.message}</p>`, // html body
       });
-res.send(``)
-});
+
+      res.status(200).send('Mensaje enviado con exito')
+  });
+
+  
+
+
 
 module.exports = router;
+

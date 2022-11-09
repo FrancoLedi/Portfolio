@@ -5,7 +5,8 @@ import profile from '../images/profile.png'
 import './Home.css'
 import { HashLink } from 'react-router-hash-link';
 import {
-  BrowserRouter as Router
+  BrowserRouter as Router,
+  Link
 } from "react-router-dom";
 import { useSelector } from 'react-redux';
 
@@ -35,9 +36,13 @@ export const Home = () => {
                       {language ? 'Enviame un mensaje' : `Let's Talk` } <Icon icon="dashicons:email-alt" color="black" width="25" height="25" inline={true} />
                       </button>
                       </HashLink>
-                      <button className='button mx-2'>
-                      {language ? 'Descargar CV' : 'Download CV'} <Icon icon="fa-solid:file-download" color="black" width="20" height="20" inline={true} /> 
-                      </button>
+
+                      <Link className='text-decoration-none' to="Henry Certificate - copia.pdf" target="_blank" download>
+                        <button className='button mx-2'>
+                          {language ? 'Descargar CV' : 'Download CV'} <Icon icon="fa-solid:file-download" color="black" width="20" height="20" inline={true} /> 
+                        </button>
+                      </Link>
+
                     </Row>
                 </Row>
             </Col>

@@ -27,8 +27,31 @@ export const Contact = () => {
       })
   }
 
+  const validate = (formDetails) => {
+    let errors = {};
+
+    if (!formDetails.firstName) {language ? errors.name = 'Un nombre es obligatorio' : errors.name = 'First name is required' ;}
+
+    if (formDetails.mail.length) {
+      if (!/\S+@\S+\.\S+/.test(formDetails.mail)) {language ? errors.mail = 'E-mail incorrecto' : errors.mail = 'Wrong E-mail'};
+    }
+    else {language ? errors.mail = 'E-mail requerido' : errors.mail = 'E-mail is required'};
+
+    if (!formDetails.message.length) {language ? errors.message = 'Escribe un mensaje' : errors.message = 'A message is required'};
+
+    if (formDetails.phone.length) {
+      if (!/^(?:(?:00)?549?)?0?(?:11|[2368]\d)(?:(?=\d{0,2}15)\d{2})??\d{8}$/.test(formDetails.phone)) {language ? errors.phone = 'Revisar formato del numero telefónico' : errors.phone = 'Check your phone number'};
+    }
+
+    return errors;
+  }
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    let errors = validate(formDetails)
+    if (Object.values(errors).length) {
+      return alert(Object.values(errors).join('\n'));
+  }
     setButtonText("Sending...");
     let response = await axios.post("http://localhost:3001/message", formDetails);
     setButtonText("Send");
@@ -42,7 +65,7 @@ export const Contact = () => {
 
   return (
     <section className="contact" id="message">
-      <Container>
+      <Container className="contactContainer">
         <Row className="align-items-center">
           <Col size={12} md={6}>
            

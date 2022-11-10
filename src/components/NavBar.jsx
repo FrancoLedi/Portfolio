@@ -1,5 +1,6 @@
 import { Navbar, Container, Nav, Offcanvas } from "react-bootstrap";
 import { useSelector, useDispatch } from 'react-redux';
+import { useState } from "react";
 import { switchLanguage } from "../redux/Actions";
 import { Icon } from '@iconify/react';
 import './navBar.css';
@@ -17,17 +18,29 @@ export const NavBar = () => {
     dispatch(switchLanguage())
   }
 
+  const [menuOpen, setMenuOpen] = useState(false)
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen)
+  }
+
+  const handleClose = () => setMenuOpen(false)
+
+
   if(screenWidth.matches){
-    // Version movil
+    // Version movil 
     return(
       <>
       <Navbar expand='md' collapseOnSelect>
       <Container>
-      <Navbar.Toggle aria-controls="offcanvasNavbar-expand-md"  />
+      <Navbar.Toggle aria-controls="offcanvasNavbar-expand-md" onClick={toggleMenu}/>
       <Navbar.Offcanvas
             id='offcanvasNavbar-expand-md'
             aria-labelledby='offcanvasNavbarLabel-expand-md'
             placement="start"
+            restoreFocus={false}
+            show={menuOpen}
+            onHide={handleClose}
           >
         <Offcanvas.Header closeButton>
               <Offcanvas.Title id='offcanvasNavbarLabel-expand-md' className='d-flex flex-direction-row'>
@@ -39,9 +52,9 @@ export const NavBar = () => {
             </Offcanvas.Header>
           <Offcanvas.Body className="justify-content-center">
         <Nav className="nav">
-          <Nav.Link href='#message' className="mx-2" >{language ? 'Contacto' : 'Contact' }</Nav.Link>
-          <Nav.Link href='#skills' className="mx-2" >{language ? 'Habilidades Técnicas' : 'Tech Skills' }</Nav.Link>
-          <Nav.Link href='#project' className="mx-2" >{language ? 'Proyectos' : 'Projects'}</Nav.Link>
+          <Nav.Link href='#message' className="mx-2" onClick={toggleMenu} >{language ? 'Contacto' : 'Contact' }</Nav.Link>
+          <Nav.Link href='#skills' className="mx-2" onClick={toggleMenu} >{language ? 'Habilidades Técnicas' : 'Tech Skills' }</Nav.Link>
+          <Nav.Link href='#project' className="mx-2" onClick={toggleMenu} >{language ? 'Proyectos' : 'Projects'}</Nav.Link>
         </Nav>
         </Offcanvas.Body>
           </Navbar.Offcanvas>

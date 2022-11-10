@@ -1,6 +1,13 @@
 .projects{
     background-color: black;
     color: #FFFEFE;
-    padding: 3rem;
+    padding: 3rem .5rem;
 }
 
+@media (min-width: 768px) and (max-width: 2560px)  {
+    .projects{
+        background-color: black;
+        color: #FFFEFE;
+        padding: 3rem 10rem;
+    }
+}

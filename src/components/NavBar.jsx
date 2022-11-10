@@ -4,6 +4,7 @@ import { switchLanguage } from "../redux/Actions";
 import { Icon } from '@iconify/react';
 import './navBar.css';
 
+
 export const NavBar = () => {
 
   const dispatch = useDispatch();
@@ -17,10 +18,10 @@ export const NavBar = () => {
   }
 
   if(screenWidth.matches){
-
+    // Version movil
     return(
       <>
-      <Navbar expand='md'>
+      <Navbar expand='md' collapseOnSelect>
       <Container>
       <Navbar.Toggle aria-controls="offcanvasNavbar-expand-md"  />
       <Navbar.Offcanvas
@@ -50,6 +51,7 @@ export const NavBar = () => {
     )}
 
 else {
+  // Version de escritorio
   return(
     <>
       <Navbar expand='md'>

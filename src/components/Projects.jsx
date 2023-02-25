@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Card, } from 'react-bootstrap';
 import './Projects.css';
-import FoodAPP from '../images/FoodAPP.png';
+import HenryGames from '../images/HenryGames.png';
 import HenryHardware from '../images/HenryHardware.jpg';
 import { useSelector } from 'react-redux';
 
@@ -11,40 +11,41 @@ export const Projects = () => {
 
   return (
     <>
-    <Container fluid className='projects' id='project'>
+    <Container fluid className='projects ContainerBackground' id='project'>
         <h1 className='title text-center'>{language ? 'Proyectos' : 'Projects'}</h1>
         <Row xs={1} md={2} className="g-4">
       
         <Col>
-          <Card className="bg-dark text-white">
-            <a href='https://food-portfolio.vercel.app/'><Card.Img variant="top" src={FoodAPP} className='img-fluid' /></a>
+          <Card className="CardBackground text-white">
+          <a href='https://videogames-vert.vercel.app/'><Card.Img variant="top" src={HenryGames} className='img-fluid' /></a>
             <Card.Body>
-              <Card.Title>SPA Foods</Card.Title>
+              <Card.Title>Videogames SPA</Card.Title>
 
               {language ? <Card.Text>
               <br></br>
-                ⊛ Paginación que muestra 9 recetas diferentes por página.<br></br> 
+                ⊛ Paginación que muestra 15 videojuegos diferentes por página.<br></br> 
                 ⊛ Filtrado y ordenamiento<br></br> 
                 ⊛ Páginas con información de cada receta.<br></br> 
-                ⊛ Busca por nombre de receta o tipo de dieta (o similitudes en la búsqueda).<br></br> 
-                ⊛ Formulario controlado para la creación de nuevas recetas.
+                ⊛ Busca por nombre de videojuego o género (o similitudes en la búsqueda).<br></br> 
+                ⊛ Formulario controlado para la creación de nuevos videojuegos.
               </Card.Text>
                :
               <Card.Text>
               <br></br>
-                ⊛ Pagination that shows 9 different recipes per page.<br></br>
+                ⊛ Pagination that shows 9 different videogames per page.<br></br>
                 ⊛ Filters and sorts.<br></br> 
-                ⊛ Pages with information for each recipe.<br></br> 
-                ⊛ Search by recipe name or type of diet (or similarities in the search).<br></br> 
-                ⊛ Controlled form for the creation of new recipes.
+                ⊛ Pages with information for each game.<br></br> 
+                ⊛ Search by videogame name or genre (or similarities in the search).<br></br> 
+                ⊛ Controlled form for the creation of new videogames.
               </Card.Text>
               }
-            </Card.Body>
+              </Card.Body>
+           
           </Card>
         </Col>
 
         <Col>
-          <Card className="bg-dark text-white">
+          <Card className="CardBackground text-white">
           <a href= 'https://proyecto-grupal-componentes-3zjq7qgo7-wizzaisha.vercel.app/'> <Card.Img variant="top" src={HenryHardware} /></a>
             <Card.Body>
               <Card.Title>E-commerce</Card.Title>

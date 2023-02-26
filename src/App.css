@@ -3,9 +3,24 @@
     padding: 0;
 }
 
+*::-webkit-scrollbar {
+    width: 0.250rem;
+    height: .1rem;
+  }
+  
+  *::-webkit-scrollbar-track{
+    background: rgba(255, 255, 255, 0.5);
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius: 20px;
+  }
+
 html, body{
     scroll-behavior: smooth;
     overflow-x: hidden;
     width: 100%;
     height: 100%;
+
 }

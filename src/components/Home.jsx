@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Icon } from '@iconify/react';
-import Traje from '../images/Traje.jpeg'
+import Traje2 from '../images/Traje2.jpg'
 import './Home.css'
 import { HashLink } from 'react-router-hash-link';
 import {
@@ -46,7 +46,7 @@ export const Home = () => {
                     </Row>
                 </Row>
             </Col>
-            <Col  className="justify-content-center d-flex" xxl={6}  xl={6}  lg={6}  md={12}  sm={12}  xs={{span: 12, order: 'first'}} ><div className='divImg'><img className='img' src= {Traje} alt='Imagen' /></div></Col>
+            <Col  className="justify-content-center d-flex" xxl={6}  xl={6}  lg={6}  md={12}  sm={12}  xs={{span: 12, order: 'first'}} ><div className='divImg'><img className='img' src= {Traje2} alt='Imagen' /></div></Col>
         </Row>
     </Container>
     </Router>

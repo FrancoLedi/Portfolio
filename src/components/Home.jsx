@@ -37,7 +37,7 @@ export const Home = () => {
                       </button>
                       </HashLink>
 
-                      <Link className='text-decoration-none' to="Henry Certificate - copia.pdf" target="_blank" download>
+                      <Link className='text-decoration-none' to={language ? "CV.pdf" : "CVIngles.pdf"} target="_blank" download>
                         <button className='button mx-2'>
                           {language ? 'Descargar CV' : 'Download CV'} <Icon icon="fa-solid:file-download" color="black" width="20" height="20" inline={true} /> 
                         </button>

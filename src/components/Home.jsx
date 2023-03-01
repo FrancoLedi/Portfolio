@@ -28,7 +28,7 @@ export const Home = () => {
                         </div>
                     </Row>
                     <Row className='my-2'>
-                        <p className='text-center paragraph'>{language ? 'Alto nivel en desarrollo web y excelentes habilidades blandas aseguran un trabajo de calidad.' : 'High level on web development and excellent soft skills ensures a quality work.'}</p>
+                        <p className='text-center paragraph'>{language ? 'Alto nivel en desarrollo web y excelentes habilidades blandas garantizan un trabajo de calidad.' : 'High level on web development and excellent soft skills ensures a quality work.'}</p>
                     </Row>
                     <Row xs='auto' className='align-items-center justify-content-center my-2' >
                     <HashLink className='text-decoration-none' to='#message'>
